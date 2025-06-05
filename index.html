@@ -2,61 +2,102 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Pravallika Bodanampalli</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pravallika Bodanampalli | Portfolio</title>
   <link rel="stylesheet" href="style.css" />
+  <script defer>
+    function toggleSection(id) {
+      const section = document.getElementById(id);
+      section.classList.toggle('hidden');
+    }
+  </script>
 </head>
 <body>
-  <header>
+  <header class="header">
     <h1>Pravallika Bodanampalli</h1>
-    <p>Software Engineer | Java + Spring Boot | AWS</p>
-    <div class="links">
-      <a href="mailto:your-email@example.com">📧 Email</a>
-      <a href="https://github.com/Pravallika-0202">GitHub</a>
-      <a href="https://linkedin.com/in/pravallika-bodanampalli">LinkedIn</a>
-      <a href="Resume_Pravallika_Bodanampalli_SDE.pdf" download>📄 Resume</a>
-    </div>
+    <p>Werribee, VIC, Australia | (+61) 410 256 002 | pravallikabodanampalli@gmail.com</p>
+    <nav>
+      <a href="https://www.linkedin.com/in/pravallika-bodanampalli" target="_blank">LinkedIn</a>
+      <a href="https://github.com/Pravallika-0202" target="_blank">GitHub</a>
+      <a href="#" onclick="toggleSection('resume')">Resume</a>
+    </nav>
   </header>
 
-  <section>
-    <h2>About Me</h2>
-    <p>
-      Software Engineer experienced in cloud-native systems using Java, Spring Boot, and AWS. 
-      Skilled in microservices, async processing, and performance tuning. Known for optimizing latency and delivering efficient systems.
-    </p>
-  </section>
+  <main>
+    <section>
+      <h2 onclick="toggleSection('summary')">Professional Summary</h2>
+      <div id="summary" class="content">
+        <p>Graduate with hands-on experience in programming, application development, product technical support, client management, and project coordination. Former Senior Consultant at LTIMindtree with specialization in software development, SAP ABAP for HANA, and client support. Skilled in cybersecurity practices including VAPT and vulnerability reporting. Proficient in secure, scalable application development, with experience in website development and project coordination. Passionate about continuous...
+      </div>
+    </section>
 
-  <section>
-    <h2>Skills</h2>
-    <ul>
-      <li><strong>Languages:</strong> Java, Python, JavaScript (React, Node.js), SQL, C, HTML5, CSS3</li>
-      <li><strong>Frameworks:</strong> Spring Boot, Flask, FastAPI, Celery</li>
-      <li><strong>Cloud:</strong> AWS, Vercel</li>
-      <li><strong>Databases:</strong> PostgreSQL, MongoDB, MySQL, DynamoDB, Redis</li>
-    </ul>
-  </section>
+    <section>
+      <h2 onclick="toggleSection('certs')">Certifications & Achievements</h2>
+      <ul id="certs" class="content hidden">
+        <li>SAP Certified Development Specialist – ABAP for SAP HANA 2.0</li>
+        <li>Machine Learning – Duke University (Coursera)</li>
+        <li>Python for Data Science – UpGrad Academy</li>
+        <li>Digital Marketing – Google Digital Garage</li>
+        <li>Data Structures using Python – Perfect Plan B</li>
+        <li>Web & Machine Learning Workshops (EAGER UPDATES, VBIT)</li>
+        <li>Reported vulnerabilities via Burp Suite</li>
+        <li>Pre-conference on Augmented Reality</li>
+        <li>Volunteer – “Cooking Down Under” (VicWISE/Auswise)</li>
+      </ul>
+    </section>
 
-  <section>
-    <h2>Projects</h2>
-    <ul>
-      <li><strong><a href="https://driver-experience.vercel.app">Driver Experience App</a>:</strong> Built a scheduling app using Next.js and PostgreSQL for Federation University.</li>
-      <li><strong>BookGenreNet:</strong> CNN + Tesseract OCR to classify books using Keras and Flask.</li>
-      <li><strong>RCM Fraud Detection:</strong> Fraud detection using Apache Spark and PySpark on Databricks.</li>
-      <li><strong>Supply Chain Dashboard:</strong> ETL + risk scoring with AWS Redshift and Tableau.</li>
-    </ul>
-  </section>
+    <section>
+      <h2 onclick="toggleSection('education')">Education</h2>
+      <ul id="education" class="content hidden">
+        <li>M.Tech in Software Engineering – Federation University (May 2025)</li>
+        <li>B.Tech in Computer Science – Guru Nanak Institutions (2022)</li>
+      </ul>
+    </section>
 
-  <section>
-    <h2>Experience</h2>
-    <ul>
-      <li><strong>LTIMindtree:</strong> SDE I – Developed credit alert microservice using Spring Boot and MongoDB</li>
-      <li><strong>Supraja Technologies:</strong> Software Engineer – Built backend APIs and CI/CD pipelines</li>
-      <li><strong>AUSWise Migration:</strong> Built dashboards using Java, PostgreSQL, and Redis on AWS</li>
-    </ul>
-  </section>
+    <section>
+      <h2 onclick="toggleSection('projects')">Projects</h2>
+      <ul id="projects" class="content hidden">
+        <li><strong>ISLC-2023:</strong> <a href="https://github.com/Pravallika-0202/ISLC-2023" target="_blank">GitHub</a></li>
+        <li><strong>COVID-19 Detection:</strong> <a href="https://github.com/Pravallika-0202/COVID-CNN" target="_blank">GitHub</a></li>
+        <li><strong>URM:</strong> <a href="https://github.com/Pravallika-0202" target="_blank">GitHub</a></li>
+        <li><strong>Maze Game:</strong> <a href="https://github.com/Pravallika-0202" target="_blank">GitHub</a></li>
+        <li><strong>Cancer Prediction:</strong> <a href="https://github.com/Pravallika-0202" target="_blank">GitHub</a></li>
+        <li><strong>Thue-Morse Generator:</strong> <a href="https://github.com/Pravallika-0202" target="_blank">GitHub</a></li>
+      </ul>
+    </section>
+
+    <section>
+      <h2 onclick="toggleSection('skills')">Technical Skills</h2>
+      <ul id="skills" class="content hidden">
+        <li><strong>Frontend:</strong> HTML, CSS, Next.js, React.js</li>
+        <li><strong>Backend:</strong> Python, Java, Django, FastAPI, REST APIs</li>
+        <li><strong>Middleware & APIs:</strong> Supabase, Prisma, GraphQL</li>
+        <li><strong>Databases:</strong> MySQL, PostgreSQL, SQLite, DynamoDB</li>
+        <li><strong>Testing:</strong> JUnit, Pytest</li>
+        <li><strong>Cybersecurity:</strong> Kali Linux, Burp Suite, SQLMap</li>
+        <li><strong>ML/DS:</strong> TensorFlow, Keras, Scikit-learn, Pandas, NumPy</li>
+        <li><strong>Cloud & DevOps:</strong> AWS, Docker, Jenkins, GitHub Actions</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2 onclick="toggleSection('experience')">Work Experience</h2>
+      <ul id="experience" class="content hidden">
+        <li><strong>AusWISE:</strong> Project Coordinator (Dec 2023 – Present)</li>
+        <li><strong>LTIMindtree:</strong> Senior Software Engineer (Jul 2022 – Jul 2023)</li>
+        <li><strong>Supraja Technologies:</strong> Web App VAPT Intern (Apr – Sep 2021)</li>
+        <li><strong>Supraja Technologies:</strong> Cybersecurity Analyst Intern (Aug – Sep 2020)</li>
+        <li><strong>Red Hat:</strong> Project Intern (Jan 2019 – Jan 2020)</li>
+      </ul>
+    </section>
+
+    <section id="resume" class="content hidden">
+      <a href="resume.pdf" download class="download-btn">Download My Resume (PDF)</a>
+    </section>
+  </main>
 
   <footer>
-    <p>© Pravallika Bodanampalli | Hosted with ❤ on GitHub Pages</p>
+    <p>&copy; 2025 Pravallika Bodanampalli</p>
   </footer>
 </body>
 </html>
